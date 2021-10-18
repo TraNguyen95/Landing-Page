@@ -1,0 +1,119 @@
+.service {
+  background-image: url("../images/decor3.png");
+  background-repeat: no-repeat;
+  background-position: 95% 19%;
+  background-size: 87px;
+
+  position: relative;
+  padding: 60px 0;
+  h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  &-list {
+    margin-bottom: 125px;
+  }
+  &-item {
+    padding: 0 25px;
+    color: #b0b0b0;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  &-item.active {
+    color: #242829;
+    position: relative;
+  }
+  &-item.active:after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 2px;
+    background: #00aeef;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+  }
+
+  &-item:not(:last-child) {
+    border-right: 1px solid #c6c6c6;
+  }
+  &-images {
+    display: flex;
+    gap: 0 20px;
+  }
+  &-column:nth-child(2) {
+    transform: translateY(-60px);
+  }
+  &-column {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    a {
+      position: relative;
+    }
+    img {
+      border-radius: 18px;
+    }
+    .title {
+      color: #0a65be;
+      background-color: #fff;
+      font-size: 15px;
+      padding: 15px 23px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(50%);
+      width: 235px;
+      bottom: 0;
+      border-radius: 16px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .service {
+    &-column {
+      .title {
+        padding: 11px 19px;
+        font-size: 12px;
+        transform: translateX(-50%) translateY(50%);
+      }
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 55px;
+      margin-bottom: 41px;
+    }
+    &-column:nth-child(2) {
+      transform: translateY(0);
+    }
+    &-images {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &-list {
+      margin-bottom: 55px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .service {
+    background-size: 37px;
+    &-column {
+      gap: 25px;
+      img {
+        border-radius: 5px;
+      }
+    }
+    .title {
+      padding: 11px 8px;
+      font-size: 10px;
+      width: 90%;
+    }
+    &-item {
+      font-size: 10px;
+      padding: 0 15px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.construct {
+  h2 {
+    margin-bottom: 15px;
+  }
+  .descipt {
+    font-size: 14px;
+    color: #6d6d6d;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  &-list {
+    display: flex;
+    gap: 20px;
+  }
+  &-item {
+    img {
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+    a {
+      color: #2d3436;
+      display: flex;
+      align-items: center;
+    }
+    span {
+      font-size: 16px;
+    }
+    ion-icon {
+      color: $blue-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .construct {
+  }
+}
+@media screen and (max-width: 768px) {
+  .construct {
+    &-item {
+      width: 48%;
+      span {
+        font-size: 12px;
+      }
+      img {
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    &-list {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
+}
